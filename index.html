@@ -100,7 +100,7 @@
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: clamp(14px, 2vw, 28px);
             min-height: 0;
             flex: 1;
@@ -144,6 +144,43 @@
             object-fit: cover;
             object-position: top center;
             transition: transform 500ms cubic-bezier(.2,.7,.2,1);
+        }
+
+        .document-cover {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: clamp(20px, 3vw, 34px);
+            color: #fff;
+            background: #000435;
+        }
+
+        .document-cover::after {
+            content: "지원서 보기  ↗";
+        }
+
+        .document-kicker {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            opacity: 0.7;
+        }
+
+        .document-name {
+            margin: auto 0;
+            font-size: clamp(1.9rem, 3.3vw, 3.5rem);
+            font-weight: 600;
+            line-height: 0.96;
+            letter-spacing: -0.065em;
+        }
+
+        .document-name small {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.72rem;
+            line-height: 1.3;
+            letter-spacing: 0.06em;
+            opacity: 0.64;
         }
 
         .project:hover .thumb img,
@@ -305,7 +342,6 @@
     <main class="page">
         <header class="header">
             <a class="brand" href="./" aria-label="프로젝트 홈">진홍진 포트폴리오</a>
-            <span class="count">이력서 보기</span>
         </header>
 
         <section class="intro" aria-labelledby="page-title">
@@ -315,11 +351,26 @@
 
         <section class="projects" aria-label="프로젝트 목록">
             <article class="project">
+                <a class="thumb document-cover" href="./docx/index.html" aria-label="미국 영크단 지원서 보기">
+                    <span class="document-kicker">LAS-ON · APPLICATION</span>
+                    <strong class="document-name">미국 영크단<br>지원서<small>HONGJIN JIN</small></strong>
+                </a>
+                <div class="meta">
+                    <span class="number">01</span>
+                    <h2 class="title">지원서</h2>
+                    <span class="type">PROFILE</span>
+                    <div class="project-links">
+                        <a class="project-link" href="./docx/index.html">내용 보기</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project">
                 <a class="thumb" href="./igloo/index.html" aria-label="이글루 기획서 보기">
                     <img src="./img/igloo_uxui.png" alt="이글루 UX/UI 프로젝트 미리보기">
                 </a>
                 <div class="meta">
-                    <span class="number">01</span>
+                    <span class="number">02</span>
                     <h2 class="title">이글루</h2>
                     <span class="type">UX/UI</span>
                     <div class="project-links">
@@ -334,7 +385,7 @@
                     <img src="./img/dearie_uxui.png" alt="디어리 UX/UI 프로젝트 미리보기">
                 </a>
                 <div class="meta">
-                    <span class="number">02</span>
+                    <span class="number">03</span>
                     <h2 class="title">디어리</h2>
                     <span class="type">UX/UI</span>
                     <div class="project-links">
@@ -349,7 +400,7 @@
                     <img src="./img/bike-UXUI.png" alt="따릉이 UX/UI 프로젝트 미리보기">
                 </a>
                 <div class="meta">
-                    <span class="number">03</span>
+                    <span class="number">04</span>
                     <h2 class="title">따릉이</h2>
                     <span class="type">UX/UI</span>
                     <div class="project-links">
