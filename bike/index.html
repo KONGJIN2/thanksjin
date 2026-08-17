@@ -31,10 +31,46 @@
         .imgBox {
             min-height: 100%;
         }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 16px;
+            color: #fff;
+            background: rgba(20, 20, 20, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 999px;
+            font: 600 13px/1 Arial, sans-serif;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: background 180ms ease, transform 180ms ease;
+        }
+        .home-button:hover {
+            background: #111;
+            transform: translateY(-1px);
+        }
+        .home-button:focus-visible {
+            outline: 2px solid #111;
+            outline-offset: 3px;
+        }
+        @media (max-width: 600px) {
+            .home-button {
+                top: 12px;
+                left: 12px;
+                padding: 10px 13px;
+                font-size: 12px;
+            }
+        }
     </style>
     <title>Bike</title>
 </head>
 <body>
+    <a class="home-button" href="../index.html" aria-label="프로젝트 홈으로 돌아가기">← Home</a>
     <div class="wrap">
         <div class="imgBox">
             <img src="../img/bike-UXUI.png" alt="따릉이">
