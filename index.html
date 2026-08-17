@@ -34,7 +34,7 @@
             font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
             -webkit-font-smoothing: antialiased;
             background: #000 !important;
-            color: #fff;
+            color: #fff !important;
         }
 
         a {
@@ -184,16 +184,8 @@
         }
 
         @media (max-width: 760px) {
-            body {
-                height: auto;
-                overflow-y: auto;
-            }
-
             .page {
-                height: auto;
-                min-height: 100svh;
-                padding: 18px 16px 36px;
-                overflow: visible;
+                padding: 16px 16px 20px;
             }
 
             .header {
@@ -202,46 +194,51 @@
 
             .intro {
                 grid-template-columns: 1fr;
-                gap: 16px;
-                padding: 36px 0 30px;
+                gap: 10px;
+                padding: 18px 0;
             }
 
             h1 {
-                font-size: clamp(3.15rem, 15vw, 5rem);
-                line-height: 0.88;
+                font-size: clamp(2.15rem, 10vw, 3.5rem);
+                line-height: 0.9;
             }
 
             .intro p {
                 width: min(100%, 24rem);
-                font-size: 0.88rem;
-                line-height: 1.6;
+                font-size: 0.78rem;
+                line-height: 1.45;
             }
 
             .projects {
                 grid-template-columns: 1fr;
-                grid-template-rows: none;
-                gap: 40px;
+                grid-template-rows: repeat(3, minmax(0, 1fr));
+                gap: 10px;
             }
 
             .project {
-                display: block;
-                overflow: visible;
-                background: transparent;
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) 7.5rem;
+                overflow: hidden;
+                background: var(--white);
             }
 
             .thumb {
-                height: auto;
-                aspect-ratio: 4 / 3;
-                border-radius: 3px;
+                height: 100%;
+                order: 2;
             }
 
             .meta {
-                grid-template-columns: 2rem 1fr auto;
-                padding: 14px 2px 0;
+                grid-template-columns: 1.8rem 1fr;
+                align-content: center;
+                padding: 14px;
+            }
+
+            .type {
+                grid-column: 2;
             }
 
             .title {
-                font-size: 1.35rem;
+                font-size: 1.15rem;
             }
 
             .thumb::after {
